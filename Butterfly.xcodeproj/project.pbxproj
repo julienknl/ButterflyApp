@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4BEEECE929335C350087C409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEECE829335C350087C409 /* AppDelegate.swift */; };
-		4BEEECEB29335C350087C409 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEECEA29335C350087C409 /* SceneDelegate.swift */; };
-		4BEEECED29335C350087C409 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEECEC29335C350087C409 /* ViewController.swift */; };
+		4BEEECED29335C350087C409 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEECEC29335C350087C409 /* HomeViewController.swift */; };
 		4BEEECF029335C350087C409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEEECEE29335C350087C409 /* Main.storyboard */; };
 		4BEEECF329335C350087C409 /* Butterfly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEECF129335C350087C409 /* Butterfly.xcdatamodeld */; };
 		4BEEECF529335C350087C409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BEEECF429335C350087C409 /* Assets.xcassets */; };
@@ -39,8 +38,7 @@
 /* Begin PBXFileReference section */
 		4BEEECE529335C350087C409 /* Butterfly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Butterfly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEEECE829335C350087C409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BEEECEA29335C350087C409 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BEEECEC29335C350087C409 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4BEEECEC29335C350087C409 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4BEEECEF29335C350087C409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BEEECF229335C350087C409 /* Butterfly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Butterfly.xcdatamodel; sourceTree = "<group>"; };
 		4BEEECF429335C350087C409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,9 +99,8 @@
 		4BEEECE729335C350087C409 /* Butterfly */ = {
 			isa = PBXGroup;
 			children = (
+				4BEEED1B293361F50087C409 /* Home */,
 				4BEEECE829335C350087C409 /* AppDelegate.swift */,
-				4BEEECEA29335C350087C409 /* SceneDelegate.swift */,
-				4BEEECEC29335C350087C409 /* ViewController.swift */,
 				4BEEECEE29335C350087C409 /* Main.storyboard */,
 				4BEEECF429335C350087C409 /* Assets.xcassets */,
 				4BEEECF629335C350087C409 /* LaunchScreen.storyboard */,
@@ -128,6 +125,14 @@
 				4BEEED0E29335C360087C409 /* ButterflyUITestsLaunchTests.swift */,
 			);
 			path = ButterflyUITests;
+			sourceTree = "<group>";
+		};
+		4BEEED1B293361F50087C409 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4BEEECEC29335C350087C409 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BEEECED29335C350087C409 /* ViewController.swift in Sources */,
+				4BEEECED29335C350087C409 /* HomeViewController.swift in Sources */,
 				4BEEECE929335C350087C409 /* AppDelegate.swift in Sources */,
-				4BEEECEB29335C350087C409 /* SceneDelegate.swift in Sources */,
 				4BEEECF329335C350087C409 /* Butterfly.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
