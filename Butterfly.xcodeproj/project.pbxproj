@@ -60,6 +60,7 @@
 		4BEEED2829337F800087C409 /* ProductOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOrder.swift; sourceTree = "<group>"; };
 		4BEEED2C2933932B0087C409 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		4BEEED2D2933932B0087C409 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		4BEEED3029339B6B0087C409 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +122,7 @@
 				4BEEECF629335C350087C409 /* LaunchScreen.storyboard */,
 				4BEEECF929335C350087C409 /* Info.plist */,
 				4BEEECF129335C350087C409 /* Butterfly.xcdatamodeld */,
+				4BEEED3029339B6B0087C409 /* README.md */,
 			);
 			path = Butterfly;
 			sourceTree = "<group>";
