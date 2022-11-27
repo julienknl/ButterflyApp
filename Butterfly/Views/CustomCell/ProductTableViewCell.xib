@@ -16,17 +16,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ch-L4-iiZ">
-                        <rect key="frame" x="8" y="12" width="14" height="21"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="84u-qC-kSu">
+                        <rect key="frame" x="8" y="3" width="77" height="38"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ch-L4-iiZ">
+                                <rect key="frame" x="0.0" y="0.0" width="16.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date updated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbC-33-4hI">
+                                <rect key="frame" x="0.0" y="23.5" width="77" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85i-b4-Vfy">
+                        <rect key="frame" x="247" y="12" width="65" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="0Ch-L4-iiZ" secondAttribute="bottom" constant="11" id="IcJ-AT-M8U"/>
-                    <constraint firstItem="0Ch-L4-iiZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Vkw-HD-Dyv"/>
-                    <constraint firstItem="0Ch-L4-iiZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Xwf-m2-4Gj"/>
+                    <constraint firstItem="85i-b4-Vfy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="PgZ-8P-v2c"/>
+                    <constraint firstItem="84u-qC-kSu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="WHi-86-Afn"/>
+                    <constraint firstAttribute="trailing" secondItem="85i-b4-Vfy" secondAttribute="trailing" constant="8" id="WVl-zC-om3"/>
+                    <constraint firstAttribute="bottom" secondItem="84u-qC-kSu" secondAttribute="bottom" constant="3" id="Y1y-dV-rxr"/>
+                    <constraint firstItem="84u-qC-kSu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="jMA-lf-u40"/>
+                    <constraint firstAttribute="bottom" secondItem="85i-b4-Vfy" secondAttribute="bottom" constant="11" id="jQF-K7-5A5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
