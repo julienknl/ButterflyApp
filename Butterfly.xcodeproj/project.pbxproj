@@ -16,6 +16,7 @@
 		4BEEED0329335C360087C409 /* ButterflyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEED0229335C360087C409 /* ButterflyTests.swift */; };
 		4BEEED0D29335C360087C409 /* ButterflyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEED0C29335C360087C409 /* ButterflyUITests.swift */; };
 		4BEEED0F29335C360087C409 /* ButterflyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEED0E29335C360087C409 /* ButterflyUITestsLaunchTests.swift */; };
+		4BEEED1E293375390087C409 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4BEEED1D293375390087C409 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BEEED1E293375390087C409 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +153,9 @@
 			dependencies = (
 			);
 			name = Butterfly;
+			packageProductDependencies = (
+				4BEEED1D293375390087C409 /* Alamofire */,
+			);
 			productName = Butterfly;
 			productReference = 4BEEECE529335C350087C409 /* Butterfly.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 4BEEECDC29335C350087C409;
+			packageReferences = (
+				4BEEED1C293375390087C409 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 4BEEECE629335C350087C409 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -606,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4BEEED1C293375390087C409 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4BEEED1D293375390087C409 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BEEED1C293375390087C409 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4BEEECF129335C350087C409 /* Butterfly.xcdatamodeld */ = {
