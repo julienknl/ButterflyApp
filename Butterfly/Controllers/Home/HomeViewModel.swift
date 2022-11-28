@@ -23,15 +23,20 @@ class HomeViewModel: NSObject {
         self.getProducts()
     }
     
-    func getProducts() {
+    private func getProducts() {
         request.simpleRequest(url: .productOrder) { [weak self] result in
             switch result {
                 
             case .success(let data):
-                print(data)
                 do {
                     let response = try JSONDecoder().decode([ProductOrder].self, from: data as? Data ?? Data())
-                    self?.products = response
+                    let repository = ProductOrderRepository()
+                    
+                    self?.saveProductLocally(response: response)
+                    self?.products = repository.findAll()
+                    
+                    let itemRepository = ItemRepository()
+                    print(itemRepository.findAll(productId: 1))
                 }
                 catch (let error) {
                     print("Failed to decode product orders data - \(error)")
@@ -43,6 +48,25 @@ class HomeViewModel: NSObject {
                     break
                 case .failed, .unknown:
                     break
+                }
+            }
+        }
+    }
+    
+    private func saveProductLocally(response: [ProductOrder]) {
+        let productRepository = ProductOrderRepository()
+        let itemRepository = ItemRepository()
+        
+        response.forEach { product in
+            guard let id = product.id else { return }
+            let responseLatestDate = Int(product.last_updated?.convertToDate().toMilliseconds ?? 0)
+            let localLatestDate = Int(productRepository.findAll().first(where: {$0.id == id})?.last_updated?.convertToDate().toMilliseconds ?? 0)
+            
+            if responseLatestDate > localLatestDate {
+                productRepository.save(product: product)
+                
+                product.items.forEach { item in
+                    itemRepository.save(item: item, foreignId: Int16(id))
                 }
             }
         }

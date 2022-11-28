@@ -17,11 +17,21 @@ class ProductTableViewCell: UITableViewCell {
         // Initialization code
     }
     
+    //Setter for product order
     func set(data: ProductOrder) {
         DispatchQueue.main.async { [unowned self] in
             idLabel.text = "ID: \(data.id ?? -1)"
             dateLabel.text = "Updated on: \(data.last_updated?.convertToReadableDate() ?? "NaN")"
-            quantityLabel.text = "Quantity: \(data.items.count)"
+            quantityLabel.text = "Quantity: \(data.itemsCount)"
+        }
+    }
+    
+    //Setter for product items
+    func set(data: ProductItem) {
+        DispatchQueue.main.async { [unowned self] in
+            idLabel.text = "ID: \(data.id ?? -1)"
+            dateLabel.isHidden = true
+            quantityLabel.text = "Quantity: \(data.quantity)"
         }
     }
 

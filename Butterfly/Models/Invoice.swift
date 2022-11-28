@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Invoice {
-    var id: Int?
-    var number: String?
-    var receiveStatus: Bool?
-    var createdDate: String?
-    var lastUpdated: String?
-}
+//struct Invoice {
+//    var id: Int?
+//    var number: String?
+//    var receiveStatus: Bool?
+//    var createdDate: String?
+//    var lastUpdated: String?
+//}

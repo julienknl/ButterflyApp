@@ -19,4 +19,20 @@ extension String {
         
         return dateString
     }
+    
+    ///Convert from ISO8601 formatted date to date
+    func convertToDate() -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let date = formatter.date(from: self) ?? Date()
+        
+        return date
+    }
+}
+
+extension Date {
+    ///Convert date to millisecond
+    var toMilliseconds: Int64 {
+        Int64((self.timeIntervalSince1970 * 1000.0).rounded())
+    }
 }
