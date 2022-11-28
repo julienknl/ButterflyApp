@@ -34,9 +34,6 @@ class HomeViewModel: NSObject {
                     
                     self?.saveProductLocally(response: response)
                     self?.products = repository.findAll()
-                    
-                    let itemRepository = ItemRepository()
-                    print(itemRepository.findAll(productId: 1))
                 }
                 catch (let error) {
                     print("Failed to decode product orders data - \(error)")
