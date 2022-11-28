@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Products-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Butterfly" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                             <constraint firstItem="gsW-KH-fTp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zMf-Gz-7Nt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RVK-bX-s5Q"/>
+                    <navigationItem key="navigationItem" title="Products" id="RVK-bX-s5Q"/>
                     <connections>
                         <outlet property="tableView" destination="gsW-KH-fTp" id="50Q-jf-l6h"/>
                     </connections>

@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
     
     private let cellIdentifier = "ProductCell"
     
+    private let viewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +33,10 @@ class HomeViewController: UIViewController {
         //Init the nib to use the custom cell
         let nib = UINib(nibName: "ProductTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
+        
+        viewModel.productsLiveData = { [weak self] in
+            self?.products = self?.viewModel.products ?? []
+        }
     }
 
 }

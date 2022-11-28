@@ -14,30 +14,22 @@ enum RequestError: Error {
 
 class RequestService {
     
-    
     //Since we can't pass any parameter for the GET method
     //We need to do a seperate method only for get
-    private func simpleRequest(url: RequestURL, completion: @escaping (Result<Any, RequestError>) -> Void) {
+    func simpleRequest(url: RequestURL, completion: @escaping (Result<Any, RequestError>) -> Void) {
         AF.request(url.urlString(),
                    method: .get)
         //Validate the status code
             .validate()
-            .responseData { response in
+            .responseJSON(completionHandler: { response in
                 switch response.result {
-                case .success(let data):
-                    do {
-                        let asJSON = try JSONSerialization.jsonObject(with: data)
-                        completion(.success(asJSON))
-                    } catch {
-                        print(error)
-                        completion(.failure(.failed))
-                    }
-                    
+                case .success(_):
+                    completion(.success(response.data as Any))
+
                 case .failure(_):
                     completion(.failure(self.generateError(statusCode: response.response?.statusCode ?? 0)))
                 }
-            }
-        
+            })
     }
     
     //Filtering error dependant on the status code
