@@ -24,7 +24,7 @@ class HomeViewModel: NSObject {
     }
     
     //Get product from the server
-    private func getProducts() {
+    func getProducts() {
         request.simpleRequest(url: .productOrder) { [weak self] result in
             switch result {
                 

@@ -29,7 +29,7 @@ class DetailViewModel: NSObject {
         getItems()
     }
     
-    private func getItems() {
+    func getItems() {
         guard let id = productId else { return }
         items = repository.findAll(productId: id)
     }

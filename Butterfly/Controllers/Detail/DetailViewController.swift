@@ -19,6 +19,8 @@ class DetailViewController: UIViewController {
         }
     }
     
+    weak var delegate: ProductDelegate?
+    
     private let cellIdentifier = "ProductCell"
     
     var productId: Int?
@@ -34,10 +36,7 @@ class DetailViewController: UIViewController {
         let nib = UINib(nibName: "ProductTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
         
-        viewModel.itemLiveData = { [weak self] in
-            self?.items = self?.viewModel.items ?? []
-        }
-        
+        getItems()
     }
     
     @IBAction func invoiceBtn(_ sender: Any) {
@@ -50,6 +49,21 @@ class DetailViewController: UIViewController {
         }
     }
 
+    @IBAction func addBtn(_ sender: Any) {
+        guard let id = productId else { return }
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "AddItemController") as? AddItemViewController {
+            controller.productId = id
+            controller.delegate = self
+            
+            present(controller, animated: true, completion: nil)
+        }
+    }
+    
+    private func getItems() {
+        self.viewModel.itemLiveData = { [weak self] in
+            self?.items = self?.viewModel.items ?? []
+        }
+    }
 }
 
 extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
@@ -64,6 +78,16 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
         cell.set(data: items[indexPath.row])
         
         return cell
+    }
+    
+}
+
+extension DetailViewController: ProductDelegate {
+    
+    func didComplete() {
+        viewModel.getItems()
+        
+        delegate?.didComplete()
     }
     
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class ProductOrderRepository {
     
@@ -17,8 +18,6 @@ class ProductOrderRepository {
         do {
             let items = try context.fetch(PurchaseOrder.fetchRequest())
             var tmpData: [ProductOrder] = []
-            
-            print(items)
             
             items.forEach { purchase in
                 var order = ProductOrder()
@@ -40,7 +39,7 @@ class ProductOrderRepository {
         let newProduct = PurchaseOrder(context: context)
         let newId = Int16((findAll().count - 1) + 1)
         newProduct.id = newId
-        newProduct.itemsCount = 0
+        newProduct.itemsCount = Int16(product.itemsCount)
         newProduct.updateDate = Date().formatted()
         do {
             try context.save()
@@ -66,6 +65,22 @@ class ProductOrderRepository {
         }
         catch {
             print("Failed to create a new product")
+        }
+    }
+    
+    //Update quantity
+    func update(productId: Int, quantity: Int) {
+        do {
+            let request: NSFetchRequest<PurchaseOrder> = PurchaseOrder.fetchRequest()
+            request.predicate = NSPredicate(format: "id == %i", productId)
+            let product = try context.fetch(request)
+            
+            product.first?.itemsCount = Int16(quantity)
+            
+            try context.save()
+        }
+        catch {
+            print("Error failed to update the product quantity")
         }
     }
 }

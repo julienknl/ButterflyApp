@@ -36,15 +36,33 @@ class ItemRepository {
         }
     }
     
+    //Get count of items for a specific product id
+    func findQuantityBy(productId: Int) -> Int {
+        do {
+            let request: NSFetchRequest<Item> = Item.fetchRequest()
+            request.predicate = NSPredicate(format: "productId == %i", productId)
+            let items = try context.fetch(request)
+            
+            return items.count
+        }
+        catch {
+            print("Error while fetching items")
+            return 0
+        }
+    }
+    
     //Create a new product item
-    func create(item: ProductItem, foreignId: Int16) {
+    func create(quantity: Int, foreignId: Int16, completion: (() -> ())!) {
         let newItem = Item(context: context)
         newItem.id = Int16(findAll(productId: Int(foreignId)).count + 1)
         newItem.updateDate = Date().formatted()
         newItem.productId = foreignId
-        newItem.quantity = Int16(item.quantity ?? 0)
+        newItem.quantity = Int16(quantity ?? 0)
         do {
             try context.save()
+            if completion != nil {
+                completion()
+            }
         }
         catch {
             print("Failed to create a new product")

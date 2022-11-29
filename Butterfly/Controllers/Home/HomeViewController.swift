@@ -52,6 +52,7 @@ class HomeViewController: UIViewController {
         if segue.identifier == segueIdentifier {
             if let destination = segue.destination as? DetailViewController {
                 destination.productId = productId
+                destination.delegate = self
             }
         }
     }
@@ -77,5 +78,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         self.performSegue(withIdentifier: segueIdentifier, sender: self)
     }
     
+}
+
+extension HomeViewController: ProductDelegate {
+    func didComplete() {
+        viewModel.getProducts()
+    }
 }
 

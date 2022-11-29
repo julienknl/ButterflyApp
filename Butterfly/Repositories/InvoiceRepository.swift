@@ -18,7 +18,7 @@ class InvoiceRepository {
         do {
             let request: NSFetchRequest<Invoice> = Invoice.fetchRequest()
             request.predicate = NSPredicate(format: "productId == %i", productId)
-            let invoices = try context.fetch(Invoice.fetchRequest())
+            let invoices = try context.fetch(request)
             var tmpData: [ProductInvoice] = []
             
             invoices.forEach { value in

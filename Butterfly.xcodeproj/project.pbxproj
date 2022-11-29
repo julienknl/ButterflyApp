@@ -15,6 +15,8 @@
 		4BB6FF8A2935DD21009D982D /* InvoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF892935DD21009D982D /* InvoiceViewModel.swift */; };
 		4BB6FF8D2935E1E6009D982D /* Invoice+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF8B2935E1E6009D982D /* Invoice+CoreDataClass.swift */; };
 		4BB6FF8E2935E1E6009D982D /* Invoice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF8C2935E1E6009D982D /* Invoice+CoreDataProperties.swift */; };
+		4BC4C91E2935FF7500DBA06D /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC4C91D2935FF7500DBA06D /* AddItemViewController.swift */; };
+		4BC4C9202936005D00DBA06D /* AddItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC4C91F2936005D00DBA06D /* AddItemModel.swift */; };
 		4BC832F829350D0B00A77252 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC832F729350D0B00A77252 /* DateExtension.swift */; };
 		4BC832FB293523ED00A77252 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC832FA293523ED00A77252 /* DetailViewController.swift */; };
 		4BC833152935278700A77252 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8330D2935278700A77252 /* Item+CoreDataClass.swift */; };
@@ -68,6 +70,8 @@
 		4BB6FF892935DD21009D982D /* InvoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewModel.swift; sourceTree = "<group>"; };
 		4BB6FF8B2935E1E6009D982D /* Invoice+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Invoice+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4BB6FF8C2935E1E6009D982D /* Invoice+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Invoice+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BC4C91D2935FF7500DBA06D /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		4BC4C91F2936005D00DBA06D /* AddItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemModel.swift; sourceTree = "<group>"; };
 		4BC832F729350D0B00A77252 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		4BC832FA293523ED00A77252 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4BC8330D2935278700A77252 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 				4BB6FF892935DD21009D982D /* InvoiceViewModel.swift */,
 			);
 			path = Invoice;
+			sourceTree = "<group>";
+		};
+		4BC4C91C2935FF5700DBA06D /* AddItem */ = {
+			isa = PBXGroup;
+			children = (
+				4BC4C91D2935FF7500DBA06D /* AddItemViewController.swift */,
+				4BC4C91F2936005D00DBA06D /* AddItemModel.swift */,
+			);
+			path = AddItem;
 			sourceTree = "<group>";
 		};
 		4BC832F629350CF200A77252 /* Extensions */ = {
@@ -246,6 +259,7 @@
 		4BEEED1F2933757C0087C409 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4BC4C91C2935FF5700DBA06D /* AddItem */,
 				4BB6FF822935C507009D982D /* Invoice */,
 				4BC832F9293523D400A77252 /* Detail */,
 				4BEEED1B293361F50087C409 /* Home */,
@@ -431,6 +445,7 @@
 				4BC832F829350D0B00A77252 /* DateExtension.swift in Sources */,
 				4BB6FF8E2935E1E6009D982D /* Invoice+CoreDataProperties.swift in Sources */,
 				4BC833172935278700A77252 /* PurchaseOrder+CoreDataClass.swift in Sources */,
+				4BC4C91E2935FF7500DBA06D /* AddItemViewController.swift in Sources */,
 				4BC8331B2935278700A77252 /* Receipt+CoreDataClass.swift in Sources */,
 				4BC8331C2935278700A77252 /* Receipt+CoreDataProperties.swift in Sources */,
 				4BC833212935339300A77252 /* ItemRepository.swift in Sources */,
@@ -438,6 +453,7 @@
 				4BB6FF882935D922009D982D /* InvoiceRepository.swift in Sources */,
 				4BC833182935278700A77252 /* PurchaseOrder+CoreDataProperties.swift in Sources */,
 				4BB4AC24293473A900C1E213 /* HomeViewModel.swift in Sources */,
+				4BC4C9202936005D00DBA06D /* AddItemModel.swift in Sources */,
 				4BEEECED29335C350087C409 /* HomeViewController.swift in Sources */,
 				4BB6FF862935C638009D982D /* DetailViewModel.swift in Sources */,
 				4BC8331F293527D400A77252 /* ProductOrderRepository.swift in Sources */,
