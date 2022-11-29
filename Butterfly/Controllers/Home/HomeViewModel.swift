@@ -23,6 +23,7 @@ class HomeViewModel: NSObject {
         self.getProducts()
     }
     
+    //Get product from the server
     private func getProducts() {
         request.simpleRequest(url: .productOrder) { [weak self] result in
             switch result {
@@ -50,6 +51,7 @@ class HomeViewModel: NSObject {
         }
     }
     
+    //Save to core data
     private func saveProductLocally(response: [ProductOrder]) {
         let productRepository = ProductOrderRepository()
         let itemRepository = ItemRepository()
@@ -78,5 +80,16 @@ class HomeViewModel: NSObject {
                 }
             }
         }
+    }
+    
+    func add() {
+        var product = ProductOrder()
+        product.itemsCount = 0
+        product.last_updated = Date().toString
+        let repository = ProductOrderRepository()
+        repository.create(product: product, completion: { [weak self] id in
+            product.id = id
+            self?.products.append(product)
+        })
     }
 }

@@ -20,7 +20,6 @@ class DetailViewController: UIViewController {
     }
     
     private let cellIdentifier = "ProductCell"
-    private let segueIdentifier = "InvoiceSegue"
     
     var productId: Int?
     private lazy var viewModel = DetailViewModel(productId: productId ?? -1)
@@ -48,17 +47,6 @@ class DetailViewController: UIViewController {
         }
         else {
             print("Error no product id found")
-        }
-    }
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueIdentifier {
-            if let destination = segue.destination as? InvoiceViewController {
-                destination.productId = productId
-            }
         }
     }
 

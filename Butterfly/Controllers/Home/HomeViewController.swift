@@ -41,6 +41,10 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @IBAction func addBtn(_ sender: Any) {
+        viewModel.add()
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

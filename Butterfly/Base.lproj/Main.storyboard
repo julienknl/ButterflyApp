@@ -30,7 +30,13 @@
                             <constraint firstItem="gsW-KH-fTp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zMf-Gz-7Nt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Products" id="RVK-bX-s5Q"/>
+                    <navigationItem key="navigationItem" title="Products" id="RVK-bX-s5Q">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="cul-Pi-PmM">
+                            <connections>
+                                <action selector="addBtn:" destination="BYZ-38-t0r" id="CYs-Sp-Mhi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="gsW-KH-fTp" id="50Q-jf-l6h"/>
                         <segue destination="nCo-Gp-fTb" kind="show" identifier="ItemSegue" id="lis-2l-7hT"/>

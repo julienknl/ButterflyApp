@@ -18,14 +18,14 @@ class ItemRepository {
         do {
             let request: NSFetchRequest<Item> = Item.fetchRequest()
             request.predicate = NSPredicate(format: "productId == %i", productId)
-            let items = try context.fetch(Item.fetchRequest())
+            let items = try context.fetch(request)
             var tmpData: [ProductItem] = []
             
             items.forEach { value in
                 var item = ProductItem()
                 item.id = Int(value.id)
                 item.last_updated = value.updateDate
-                item.quantity = Int(value.quantity ?? 0)
+                item.quantity = Int(value.quantity)
                 tmpData.append(item)
             }
             return tmpData

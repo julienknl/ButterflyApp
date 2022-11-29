@@ -36,13 +36,17 @@ class ProductOrderRepository {
     }
     
     //Create a new product
-    func create(product: ProductOrder) {
+    func create(product: ProductOrder, completion: ((Int) -> ())!) {
         let newProduct = PurchaseOrder(context: context)
-        newProduct.id = Int16(findAll().count + 1)
+        let newId = Int16((findAll().count - 1) + 1)
+        newProduct.id = newId
         newProduct.itemsCount = 0
         newProduct.updateDate = Date().formatted()
         do {
             try context.save()
+            if completion != nil {
+                completion(Int(newId))
+            }
         }
         catch {
             print("Failed to create a new product")

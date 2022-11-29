@@ -35,4 +35,13 @@ extension Date {
     var toMilliseconds: Int64 {
         Int64((self.timeIntervalSince1970 * 1000.0).rounded())
     }
+    
+    ///Convert from date to string
+    var toString: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let dateString = formatter.string(from: self)
+        
+        return dateString
+    }
 }
