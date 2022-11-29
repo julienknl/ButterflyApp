@@ -52,17 +52,17 @@ struct ProductOrder: Decodable {
     init() {}
 }
 
-struct Product: Decodable {
-    var id: Int?
-    var last_updated: String?
-    var items: [[String : ProductItem]] = []
-    
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case last_updated = "last_updated"
-        case items = "items"
-    }
-}
+//struct Product: Decodable {
+//    var id: Int?
+//    var last_updated: String?
+//    var items: [[String : ProductItem]] = []
+//
+//    enum CodingKeys: String, CodingKey {
+//        case id = "id"
+//        case last_updated = "last_updated"
+//        case items = "items"
+//    }
+//}
 
 struct ProductItem: Decodable {
     var id: Int?
@@ -87,9 +87,19 @@ struct ProductItem: Decodable {
 struct ProductInvoice: Decodable {
     var invoice_number: String?
     var received_status: Int?
+    var receipts: [ProductReceipt] = []
     
     enum CodingKeys: String, CodingKey {
         case invoice_number = "invoice_number"
         case received_status = "received_status"
+        case receipts = "receipts"
+    }
+}
+
+struct ProductReceipt: Decodable {
+    var id: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
     }
 }

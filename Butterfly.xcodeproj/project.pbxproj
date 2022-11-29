@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4BB4AC22293472DC00C1E213 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4AC21293472DC00C1E213 /* Invoice.swift */; };
 		4BB4AC24293473A900C1E213 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4AC23293473A900C1E213 /* HomeViewModel.swift */; };
 		4BB6FF842935C52B009D982D /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF832935C52B009D982D /* InvoiceViewController.swift */; };
 		4BB6FF862935C638009D982D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF852935C638009D982D /* DetailViewModel.swift */; };
@@ -17,6 +16,7 @@
 		4BB6FF8E2935E1E6009D982D /* Invoice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF8C2935E1E6009D982D /* Invoice+CoreDataProperties.swift */; };
 		4BC4C91E2935FF7500DBA06D /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC4C91D2935FF7500DBA06D /* AddItemViewController.swift */; };
 		4BC4C9202936005D00DBA06D /* AddItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC4C91F2936005D00DBA06D /* AddItemModel.swift */; };
+		4BC4C922293612C200DBA06D /* ReceiptRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC4C921293612C200DBA06D /* ReceiptRepository.swift */; };
 		4BC832F829350D0B00A77252 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC832F729350D0B00A77252 /* DateExtension.swift */; };
 		4BC832FB293523ED00A77252 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC832FA293523ED00A77252 /* DetailViewController.swift */; };
 		4BC833152935278700A77252 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8330D2935278700A77252 /* Item+CoreDataClass.swift */; };
@@ -62,7 +62,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4BB4AC21293472DC00C1E213 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		4BB4AC23293473A900C1E213 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4BB6FF832935C52B009D982D /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
 		4BB6FF852935C638009D982D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		4BB6FF8C2935E1E6009D982D /* Invoice+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Invoice+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4BC4C91D2935FF7500DBA06D /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		4BC4C91F2936005D00DBA06D /* AddItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemModel.swift; sourceTree = "<group>"; };
+		4BC4C921293612C200DBA06D /* ReceiptRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRepository.swift; sourceTree = "<group>"; };
 		4BC832F729350D0B00A77252 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		4BC832FA293523ED00A77252 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4BC8330D2935278700A77252 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -185,6 +185,7 @@
 				4BC8331E293527D400A77252 /* ProductOrderRepository.swift */,
 				4BC833202935339300A77252 /* ItemRepository.swift */,
 				4BB6FF872935D922009D982D /* InvoiceRepository.swift */,
+				4BC4C921293612C200DBA06D /* ReceiptRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -280,7 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				4BEEED2829337F800087C409 /* ProductOrder.swift */,
-				4BB4AC21293472DC00C1E213 /* Invoice.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -455,6 +455,7 @@
 				4BB4AC24293473A900C1E213 /* HomeViewModel.swift in Sources */,
 				4BC4C9202936005D00DBA06D /* AddItemModel.swift in Sources */,
 				4BEEECED29335C350087C409 /* HomeViewController.swift in Sources */,
+				4BC4C922293612C200DBA06D /* ReceiptRepository.swift in Sources */,
 				4BB6FF862935C638009D982D /* DetailViewModel.swift in Sources */,
 				4BC8331F293527D400A77252 /* ProductOrderRepository.swift in Sources */,
 				4BB6FF8A2935DD21009D982D /* InvoiceViewModel.swift in Sources */,
@@ -463,7 +464,6 @@
 				4BC833152935278700A77252 /* Item+CoreDataClass.swift in Sources */,
 				4BEEED24293376170087C409 /* RequestUrl.swift in Sources */,
 				4BEEED22293375B10087C409 /* RequestService.swift in Sources */,
-				4BB4AC22293472DC00C1E213 /* Invoice.swift in Sources */,
 				4BB6FF842935C52B009D982D /* InvoiceViewController.swift in Sources */,
 				4BEEECE929335C350087C409 /* AppDelegate.swift in Sources */,
 				4BEEECF329335C350087C409 /* Butterfly.xcdatamodeld in Sources */,

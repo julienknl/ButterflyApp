@@ -17,6 +17,7 @@ extension Receipt {
     }
 
     @NSManaged public var id: Int16
+    @NSManaged public var productId: Int16
 
 }
 

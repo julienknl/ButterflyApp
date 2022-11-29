@@ -56,6 +56,7 @@ class HomeViewModel: NSObject {
         let productRepository = ProductOrderRepository()
         let itemRepository = ItemRepository()
         let invoiceRepository = InvoiceRepository()
+        let receiptRepository = ReceiptRepository()
         
         response.forEach { product in
             guard let id = product.id else { return }
@@ -76,6 +77,13 @@ class HomeViewModel: NSObject {
                 if !product.invoices.isEmpty {
                     product.invoices.forEach { invoice in
                         invoiceRepository.save(invoice: invoice, foreignId: Int16(id))
+                        
+                        //Save receipt
+                        if !invoice.receipts.isEmpty {
+                            invoice.receipts.forEach { receipt in
+                                receiptRepository.save(id: receipt.id ?? 0, foreignId: Int16(id))
+                            }
+                        }
                     }
                 }
             }
