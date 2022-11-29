@@ -53,6 +53,7 @@ class HomeViewModel: NSObject {
     private func saveProductLocally(response: [ProductOrder]) {
         let productRepository = ProductOrderRepository()
         let itemRepository = ItemRepository()
+        let invoiceRepository = InvoiceRepository()
         
         response.forEach { product in
             guard let id = product.id else { return }
@@ -62,8 +63,18 @@ class HomeViewModel: NSObject {
             if responseLatestDate > localLatestDate {
                 productRepository.save(product: product)
                 
-                product.items.forEach { item in
-                    itemRepository.save(item: item, foreignId: Int16(id))
+                //Save items to core data
+                if !product.items.isEmpty {
+                    product.items.forEach { item in
+                        itemRepository.save(item: item, foreignId: Int16(id))
+                    }
+                }
+                
+                //Save invoices to core data
+                if !product.invoices.isEmpty {
+                    product.invoices.forEach { invoice in
+                        invoiceRepository.save(invoice: invoice, foreignId: Int16(id))
+                    }
                 }
             }
         }

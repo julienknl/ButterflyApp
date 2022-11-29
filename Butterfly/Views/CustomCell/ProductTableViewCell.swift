@@ -34,6 +34,15 @@ class ProductTableViewCell: UITableViewCell {
             quantityLabel.text = "Quantity: \(data.quantity ?? 0)"
         }
     }
+    
+    //Setter for invoice
+    func set(data: ProductInvoice) {
+        DispatchQueue.main.async { [unowned self] in
+            idLabel.text = "Number: \(data.invoice_number ?? "NaN")"
+            dateLabel.isHidden = true
+            quantityLabel.text = "Status: \(data.received_status == 1 ? "Received" : "Not received")"
+        }
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

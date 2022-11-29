@@ -60,7 +60,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Invoices"/>
                                         <connections>
-                                            <segue destination="aDH-lZ-EJe" kind="show" id="RZs-DT-CH7"/>
+                                            <action selector="invoiceBtn:" destination="nCo-Gp-fTb" eventType="touchUpInside" id="Zhc-lg-jvy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -98,7 +98,7 @@
         <!--Invoices-->
         <scene sceneID="oWD-JE-ScB">
             <objects>
-                <viewController id="aDH-lZ-EJe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InvoiceStoryboard" id="aDH-lZ-EJe" customClass="InvoiceViewController" customModule="Butterfly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ape-40-CWY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,6 +118,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Invoices" id="fJg-tE-lkp"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="Shp-H5-vKm" id="CFb-zx-lyc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AfB-wX-nXj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

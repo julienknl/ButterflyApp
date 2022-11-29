@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
     }
     
     private let cellIdentifier = "ProductCell"
+    private let segueIdentifier = "InvoiceSegue"
     
     var productId: Int?
     private lazy var viewModel = DetailViewModel(productId: productId ?? -1)
@@ -40,12 +41,25 @@ class DetailViewController: UIViewController {
         
     }
     
+    @IBAction func invoiceBtn(_ sender: Any) {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "InvoiceStoryboard") as? InvoiceViewController, productId != nil {
+            controller.productId = productId
+            present(controller, animated: true, completion: nil)
+        }
+        else {
+            print("Error no product id found")
+        }
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == segueIdentifier {
+            if let destination = segue.destination as? InvoiceViewController {
+                destination.productId = productId
+            }
+        }
     }
 
 }

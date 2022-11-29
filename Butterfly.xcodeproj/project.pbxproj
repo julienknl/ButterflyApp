@@ -11,14 +11,16 @@
 		4BB4AC24293473A900C1E213 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4AC23293473A900C1E213 /* HomeViewModel.swift */; };
 		4BB6FF842935C52B009D982D /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF832935C52B009D982D /* InvoiceViewController.swift */; };
 		4BB6FF862935C638009D982D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF852935C638009D982D /* DetailViewModel.swift */; };
+		4BB6FF882935D922009D982D /* InvoiceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF872935D922009D982D /* InvoiceRepository.swift */; };
+		4BB6FF8A2935DD21009D982D /* InvoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF892935DD21009D982D /* InvoiceViewModel.swift */; };
+		4BB6FF8D2935E1E6009D982D /* Invoice+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF8B2935E1E6009D982D /* Invoice+CoreDataClass.swift */; };
+		4BB6FF8E2935E1E6009D982D /* Invoice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6FF8C2935E1E6009D982D /* Invoice+CoreDataProperties.swift */; };
 		4BC832F829350D0B00A77252 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC832F729350D0B00A77252 /* DateExtension.swift */; };
 		4BC832FB293523ED00A77252 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC832FA293523ED00A77252 /* DetailViewController.swift */; };
 		4BC833152935278700A77252 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8330D2935278700A77252 /* Item+CoreDataClass.swift */; };
 		4BC833162935278700A77252 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8330E2935278700A77252 /* Item+CoreDataProperties.swift */; };
 		4BC833172935278700A77252 /* PurchaseOrder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8330F2935278700A77252 /* PurchaseOrder+CoreDataClass.swift */; };
 		4BC833182935278700A77252 /* PurchaseOrder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC833102935278700A77252 /* PurchaseOrder+CoreDataProperties.swift */; };
-		4BC833192935278700A77252 /* Invoice+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC833112935278700A77252 /* Invoice+CoreDataClass.swift */; };
-		4BC8331A2935278700A77252 /* Invoice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC833122935278700A77252 /* Invoice+CoreDataProperties.swift */; };
 		4BC8331B2935278700A77252 /* Receipt+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC833132935278700A77252 /* Receipt+CoreDataClass.swift */; };
 		4BC8331C2935278700A77252 /* Receipt+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC833142935278700A77252 /* Receipt+CoreDataProperties.swift */; };
 		4BC8331F293527D400A77252 /* ProductOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC8331E293527D400A77252 /* ProductOrderRepository.swift */; };
@@ -62,14 +64,16 @@
 		4BB4AC23293473A900C1E213 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4BB6FF832935C52B009D982D /* InvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
 		4BB6FF852935C638009D982D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		4BB6FF872935D922009D982D /* InvoiceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceRepository.swift; sourceTree = "<group>"; };
+		4BB6FF892935DD21009D982D /* InvoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewModel.swift; sourceTree = "<group>"; };
+		4BB6FF8B2935E1E6009D982D /* Invoice+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Invoice+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BB6FF8C2935E1E6009D982D /* Invoice+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Invoice+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4BC832F729350D0B00A77252 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		4BC832FA293523ED00A77252 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4BC8330D2935278700A77252 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4BC8330E2935278700A77252 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4BC8330F2935278700A77252 /* PurchaseOrder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchaseOrder+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4BC833102935278700A77252 /* PurchaseOrder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchaseOrder+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4BC833112935278700A77252 /* Invoice+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Invoice+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4BC833122935278700A77252 /* Invoice+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Invoice+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4BC833132935278700A77252 /* Receipt+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4BC833142935278700A77252 /* Receipt+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Receipt+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4BC8331E293527D400A77252 /* ProductOrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOrderRepository.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				4BB6FF832935C52B009D982D /* InvoiceViewController.swift */,
+				4BB6FF892935DD21009D982D /* InvoiceViewModel.swift */,
 			);
 			path = Invoice;
 			sourceTree = "<group>";
@@ -149,12 +154,12 @@
 		4BC832FC2935275400A77252 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				4BB6FF8B2935E1E6009D982D /* Invoice+CoreDataClass.swift */,
+				4BB6FF8C2935E1E6009D982D /* Invoice+CoreDataProperties.swift */,
 				4BC8330D2935278700A77252 /* Item+CoreDataClass.swift */,
 				4BC8330E2935278700A77252 /* Item+CoreDataProperties.swift */,
 				4BC8330F2935278700A77252 /* PurchaseOrder+CoreDataClass.swift */,
 				4BC833102935278700A77252 /* PurchaseOrder+CoreDataProperties.swift */,
-				4BC833112935278700A77252 /* Invoice+CoreDataClass.swift */,
-				4BC833122935278700A77252 /* Invoice+CoreDataProperties.swift */,
 				4BC833132935278700A77252 /* Receipt+CoreDataClass.swift */,
 				4BC833142935278700A77252 /* Receipt+CoreDataProperties.swift */,
 			);
@@ -166,6 +171,7 @@
 			children = (
 				4BC8331E293527D400A77252 /* ProductOrderRepository.swift */,
 				4BC833202935339300A77252 /* ItemRepository.swift */,
+				4BB6FF872935D922009D982D /* InvoiceRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -423,16 +429,19 @@
 				4BC832FB293523ED00A77252 /* DetailViewController.swift in Sources */,
 				4BEEED2929337F800087C409 /* ProductOrder.swift in Sources */,
 				4BC832F829350D0B00A77252 /* DateExtension.swift in Sources */,
+				4BB6FF8E2935E1E6009D982D /* Invoice+CoreDataProperties.swift in Sources */,
 				4BC833172935278700A77252 /* PurchaseOrder+CoreDataClass.swift in Sources */,
 				4BC8331B2935278700A77252 /* Receipt+CoreDataClass.swift in Sources */,
 				4BC8331C2935278700A77252 /* Receipt+CoreDataProperties.swift in Sources */,
 				4BC833212935339300A77252 /* ItemRepository.swift in Sources */,
+				4BB6FF8D2935E1E6009D982D /* Invoice+CoreDataClass.swift in Sources */,
+				4BB6FF882935D922009D982D /* InvoiceRepository.swift in Sources */,
 				4BC833182935278700A77252 /* PurchaseOrder+CoreDataProperties.swift in Sources */,
 				4BB4AC24293473A900C1E213 /* HomeViewModel.swift in Sources */,
 				4BEEECED29335C350087C409 /* HomeViewController.swift in Sources */,
-				4BC833192935278700A77252 /* Invoice+CoreDataClass.swift in Sources */,
 				4BB6FF862935C638009D982D /* DetailViewModel.swift in Sources */,
 				4BC8331F293527D400A77252 /* ProductOrderRepository.swift in Sources */,
+				4BB6FF8A2935DD21009D982D /* InvoiceViewModel.swift in Sources */,
 				4BC833162935278700A77252 /* Item+CoreDataProperties.swift in Sources */,
 				4BEEED2E2933932B0087C409 /* ProductTableViewCell.swift in Sources */,
 				4BC833152935278700A77252 /* Item+CoreDataClass.swift in Sources */,
@@ -442,7 +451,6 @@
 				4BB6FF842935C52B009D982D /* InvoiceViewController.swift in Sources */,
 				4BEEECE929335C350087C409 /* AppDelegate.swift in Sources */,
 				4BEEECF329335C350087C409 /* Butterfly.xcdatamodeld in Sources */,
-				4BC8331A2935278700A77252 /* Invoice+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

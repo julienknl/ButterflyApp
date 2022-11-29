@@ -11,6 +11,7 @@ struct ProductOrder: Decodable {
     var id: Int?
     var last_updated: String?
     var items: [ProductItem] = []
+    var invoices: [ProductInvoice] = []
     var itemsCount = 0
     
     enum CodingKeys: String, CodingKey {
@@ -24,15 +25,26 @@ struct ProductOrder: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(Int.self, forKey: .id)
         last_updated = try container.decode(String.self, forKey: .last_updated)
-        var nestedContainer = try container.nestedUnkeyedContainer(forKey: .items)
+        var itemsContainer = try container.nestedUnkeyedContainer(forKey: .items)
+        var invoicesContainer = try container.nestedUnkeyedContainer(forKey: .invoices)
         
-        while !nestedContainer.isAtEnd {
+        while !itemsContainer.isAtEnd {
             do {
-                let product = try nestedContainer.decode(ProductItem.self)
+                let product = try itemsContainer.decode(ProductItem.self)
                 items.append(product)
             }
             catch {
-                print("Failed to loop")
+                print("Failed to decode items")
+            }
+        }
+        
+        while !invoicesContainer.isAtEnd {
+            do {
+                let invoice = try invoicesContainer.decode(ProductInvoice.self)
+                invoices.append(invoice)
+            }
+            catch {
+                print("Failed to decode invoices")
             }
         }
     }
@@ -72,7 +84,7 @@ struct ProductItem: Decodable {
     }
 }
 
-struct Invoices: Decodable {
+struct ProductInvoice: Decodable {
     var invoice_number: String?
     var received_status: Int?
     

@@ -2,7 +2,7 @@
 //  Invoice+CoreDataProperties.swift
 //  Butterfly
 //
-//  Created by Julien on 28/11/2022.
+//  Created by Julien on 29/11/2022.
 //
 //
 
@@ -16,8 +16,9 @@ extension Invoice {
         return NSFetchRequest<Invoice>(entityName: "Invoice")
     }
 
-    @NSManaged public var number: Int16
-    @NSManaged public var status: String?
+    @NSManaged public var number: String?
+    @NSManaged public var status: Int16
+    @NSManaged public var productId: Int16
 
 }
 

@@ -21,8 +21,6 @@ class ItemRepository {
             let items = try context.fetch(Item.fetchRequest())
             var tmpData: [ProductItem] = []
             
-            print(items)
-            
             items.forEach { value in
                 var item = ProductItem()
                 item.id = Int(value.id)
