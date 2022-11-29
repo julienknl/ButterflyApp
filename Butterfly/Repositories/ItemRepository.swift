@@ -27,6 +27,7 @@ class ItemRepository {
                 var item = ProductItem()
                 item.id = Int(value.id)
                 item.last_updated = value.updateDate
+                item.quantity = Int(value.quantity ?? 0)
                 tmpData.append(item)
             }
             return tmpData
@@ -43,6 +44,7 @@ class ItemRepository {
         newItem.id = Int16(findAll(productId: Int(foreignId)).count + 1)
         newItem.updateDate = Date().formatted()
         newItem.productId = foreignId
+        newItem.quantity = Int16(item.quantity ?? 0)
         do {
             try context.save()
         }
@@ -58,6 +60,7 @@ class ItemRepository {
         newItem.id = Int16(id)
         newItem.updateDate = item.last_updated
         newItem.productId = foreignId
+        newItem.quantity = Int16(item.quantity ?? 0)
         do {
             try context.save()
         }

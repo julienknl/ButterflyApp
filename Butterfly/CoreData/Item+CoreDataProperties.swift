@@ -19,6 +19,7 @@ extension Item {
     @NSManaged public var id: Int16
     @NSManaged public var productId: Int16
     @NSManaged public var updateDate: String?
+    @NSManaged public var quantity: Int16
 
 }
 

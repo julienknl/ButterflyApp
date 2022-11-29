@@ -17,6 +17,7 @@ struct ProductOrder: Decodable {
         case id = "id"
         case last_updated = "last_updated"
         case items = "items"
+        case invoices = "invoices"
     }
     
     init(from decoder: Decoder) throws {
@@ -71,6 +72,12 @@ struct ProductItem: Decodable {
     }
 }
 
-struct ProductItemWrapper: Decodable {
-    var items: [ProductItem] = []
+struct Invoices: Decodable {
+    var invoice_number: String?
+    var received_status: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case invoice_number = "invoice_number"
+        case received_status = "received_status"
+    }
 }

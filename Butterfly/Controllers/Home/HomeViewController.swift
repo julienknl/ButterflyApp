@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
     }
     
     private let cellIdentifier = "ProductCell"
+    private let segueIdentifier = "ItemSegue"
+    private var productId: Int?
     
     private let viewModel = HomeViewModel()
     
@@ -38,6 +40,17 @@ class HomeViewController: UIViewController {
             self?.products = self?.viewModel.products ?? []
         }
     }
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifier {
+            if let destination = segue.destination as? DetailViewController {
+                destination.productId = productId
+            }
+        }
+    }
 
 }
 
@@ -53,6 +66,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.set(data: products[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.productId = products[indexPath.row].id
+        self.performSegue(withIdentifier: segueIdentifier, sender: self)
     }
     
 }

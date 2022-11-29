@@ -42,9 +42,9 @@ class HomeViewModel: NSObject {
                 switch error {
                     
                 case .noInternetConnection:
-                    break
+                    print("ERROR with no internet connection")
                 case .failed, .unknown:
-                    break
+                    print("ERROR failed request. Please try again later.")
                 }
             }
         }

@@ -31,7 +31,7 @@ class ProductTableViewCell: UITableViewCell {
         DispatchQueue.main.async { [unowned self] in
             idLabel.text = "ID: \(data.id ?? -1)"
             dateLabel.isHidden = true
-            quantityLabel.text = "Quantity: \(data.quantity)"
+            quantityLabel.text = "Quantity: \(data.quantity ?? 0)"
         }
     }
 
