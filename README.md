@@ -6,12 +6,18 @@ This iOS application is designed to manage purchase orders and related data usin
 # Project Overview
 
 **Data Source:** The app fetches a list of purchase orders from a JSON API endpoint here.
+
 **CoreData Database:** The CoreData database includes four tables: Purchase Order, Item, Invoice, and Receipt, matching the schema of the sample JSON data.
+
 **User Interface:** The app's user interface consists of:
-  **Home Page:** Displays a list of purchase orders with details such as PO ID, the number of items, and the last updated date.
-  **Detail Page:** Allows users to view the items (item ID and quantity) and invoices (invoice number and received status) for a selected purchase order.
-  **Add Purchase Order:** Provides a simple interface to add a new purchase order.
-  **Add Item:** Allows users to add new items to an existing purchase order.
+
+  * **Home Page:** Displays a list of purchase orders with details such as PO ID, the number of items, and the last updated date.
+  
+  * **Detail Page:** Allows users to view the items (item ID and quantity) and invoices (invoice number and received status) for a selected purchase order.
+  
+  * **Add Purchase Order:** Provides a simple interface to add a new purchase order.
+  
+  * **Add Item:** Allows users to add new items to an existing purchase order.
 
 # Key Features
 **Data Synchronization:** The app initially populates its CoreData database from the server. Local data persists across sessions and is only updated if the server's data has a more recent last updated time.
@@ -20,9 +26,9 @@ This iOS application is designed to manage purchase orders and related data usin
 
 # Getting Started
 
-Clone this repository to your local machine.
-Open the Xcode project and build the app.
-Run the app on your iOS simulator or device.
+* Clone this repository to your local machine.
+* Open the Xcode project and build the app.
+* Run the app on your iOS simulator or device.
 
 # Contributing
 Contributions and improvements to the project are welcome! Please follow our Contribution Guidelines to get started.
