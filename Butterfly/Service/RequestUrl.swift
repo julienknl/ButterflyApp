@@ -17,7 +17,7 @@ enum RequestURL {
         switch self {
             
         case .productOrder:
-            return "https://my-json-server.typicode.com/butterfly-systems/sample-data/purchase_orders"
+            return ""
         }
     }
 }
